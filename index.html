@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            max-width: 1000px;
+            margin-right: 15vw;
+            margin-left: 15vw;
+        }
+
+        article {
+            border: solid 3px #333;
+            padding: 10px;
+            margin: 1em;
+
+        }
+
+        article img {
+            max-width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <section></section>
+
+    <template>
+        <article>
+            <img src="" alt="" class="billede">
+            <h1 class="title"></h1>
+            <h2 class="artist"></h2>
+            <h3 class="album"></h3>
+            <h4 class="date"></h4>
+            <p class="genre"></p>
+            <p class="beskrivelse"></p>
+        </article>
+    </template>
+
+    <script>
+        const url = "https://gruppe12-b9a1.restdb.io/rest/sange";
+        const medieurl = "https://gruppe12-b9a1.restdb.io/media/";
+
+        const options = {
+            headers: {
+                'x-apikey': "602a6d665ad3610fb5bb6054"
+            }
+        };
+
+        async function hentData() {
+            const respons = await fetch(url, options, );
+            const json = await respons.json();
+            vis(json);
+        }
+
+        const main = document.querySelector("section");
+        const template = document.querySelector("template").content;
+
+        function vis(json) {
+            console.log(json);
+            json.forEach(song => {
+                const klon = template.cloneNode(true);
+                klon.querySelector(".billede").src = medieurl + song.Billede;
+                klon.querySelector(".title").textContent = song.Sang;
+                klon.querySelector(".artist").textContent = song.Kunstner;
+                klon.querySelector(".album").textContent = song.Album;
+                klon.querySelector(".date").textContent = song.Udgivelsesdato;
+                klon.querySelector(".genre").textContent = song.Genre;
+                klon.querySelector(".beskrivelse").textcontent = song.Beskrivelse;
+                main.appendChild(klon);
+
+            })
+        }
+
+        hentData();
+
+    </script>
+</body>
+
+</html>
