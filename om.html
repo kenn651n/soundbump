@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            min-height: 8vh;
+            background-color: #1A1A1A;
+            align-items: center;
+        }
+
+        .burger div {
+            width: 30px;
+            height: 2.5px;
+            background-color: white;
+            margin: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .logo img {
+            width: 50%;
+        }
+
+        .logo li {
+            list-style: none;
+        }
+
+        .nav-links {
+            position: absolute;
+            height: 92vh;
+            top: 8vh;
+            justify-content: space-around;
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            align-items: center;
+            width: 50%;
+            right: 0px;
+            z-index: +1;
+            transform: translate(100%);
+            transition: transform 0.5s ease-in;
+        }
+
+        .nav-links li {
+            list-style: none;
+            margin-top: 15vh;
+            margin-bottom: 15vh;
+
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            letter-spacing: 3px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .nav-active {
+            transform: translateX(0%);
+        }
+
+        .toggle .line1 {
+            transform: rotate(-45deg) translate(-6.5px, 5px);
+        }
+
+        .toggle .line2 {
+            opacity: 0;
+        }
+
+        .toggle .line3 {
+            transform: rotate(+45deg) translate(-7.5px, -6px);
+        }
+
+        body {
+            background-color: #1A1A1A;
+
+        }
+
+        .titel {
+            font-size: 4em;
+            color: #00C2BC;
+            text-align: center;
+            margin-bottom: 5vh;
+        }
+
+        .omos {
+            display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1em;
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        .omosimg {
+            width: 100%;
+        }
+
+        p {
+            color: whitesmoke;
+            font-size: 1.5em;
+            padding: 2vh;
+        }
+
+        .bold {
+            font-weight: bolder;
+        }
+
+        #eryktext {
+            border: 1px solid whitesmoke;
+        }
+        #kennethtext {
+            border: 1px solid whitesmoke;
+        }
+        #lassetext {
+            border: 1px solid whitesmoke;
+        }
+        #marcotext {
+            border: 1px solid whitesmoke;
+        }
+        #sajadtext {
+            border: 1px solid whitesmoke;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="logo">
+                <ul>
+                    <li><img src="logo/soundbump-logo-04.png"></li>
+                </ul>
+            </div>
+
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+
+            </div>
+
+
+            <div class="nav-links">
+
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About us</a></li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+    <h1 class="titel">ABOUT US</h1>
+    <section class="omos">
+            <img class="omosimg" src="https://placeimg.com/400/400/people" alt="">
+            <p id="eryktext"> <span class="bold">Eryk Piotr Munk</span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error debitis eius ipsum a eos at. Repellendus nulla fuga dolorum ratione consectetur, at. Animi, vero nesciunt sunt ipsam vitae autem soluta? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias perferendis recusandae ratione nisi quisquam! Provident aspernatur, nisi consectetur nesciunt ducimus, earum rem inventore, sequi ratione ut perferendis sapiente eos corporis.</p>
+            <p id="kennethtext"> <span class="bold">Kenneth Oberes Petersen</span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error debitis eius ipsum a eos at. Repellendus nulla fuga dolorum ratione consectetur, at. Animi, vero nesciunt sunt ipsam vitae autem soluta? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias perferendis recusandae ratione nisi quisquam! Provident aspernatur, nisi consectetur nesciunt ducimus, earum rem inventore, sequi ratione ut perferendis sapiente eos corporis.</p>
+            <img class="omosimg" src="https://placeimg.com/400/400/people" alt="">
+            <img class="omosimg" src="https://placeimg.com/400/400/people" alt="">
+            <p id="lassetext"> <span class="bold">Lasse Mark Smedegaard</span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error debitis eius ipsum a eos at. Repellendus nulla fuga dolorum ratione consectetur, at. Animi, vero nesciunt sunt ipsam vitae autem soluta? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias perferendis recusandae ratione nisi quisquam! Provident aspernatur, nisi consectetur nesciunt ducimus, earum rem inventore, sequi ratione ut perferendis sapiente eos corporis.</p>
+            <p id="marcotext"> <span class="bold">Marco Nyborg</span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error debitis eius ipsum a eos at. Repellendus nulla fuga dolorum ratione consectetur, at. Animi, vero nesciunt sunt ipsam vitae autem soluta? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias perferendis recusandae ratione nisi quisquam! Provident aspernatur, nisi consectetur nesciunt ducimus, earum rem inventore, sequi ratione ut perferendis sapiente eos corporis.</p>
+            <img class="omosimg" src="https://placeimg.com/400/400/people" alt="">
+            <img class="omosimg" src="https://placeimg.com/400/400/people" alt="">
+            <p id="sajadtext"> <span class="bold">Sajad Saboor</span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error debitis eius ipsum a eos at. Repellendus nulla fuga dolorum ratione consectetur, at. Animi, vero nesciunt sunt ipsam vitae autem soluta? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias perferendis recusandae ratione nisi quisquam! Provident aspernatur, nisi consectetur nesciunt ducimus, earum rem inventore, sequi ratione ut perferendis sapiente eos corporis.</p>
+
+
+    </section>
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            //toggle nav
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+                burger.classList.toggle('toggle');
+            });
+            //burger animation
+
+        }
+
+        navSlide();
+    </script>
+</body></html>
