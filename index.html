@@ -6,7 +6,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            min-height: 10vh;
+            background-color: black;
+            align-items: center;
+
+        }
+
+        .burger {
+            height: 31px;
+        }
+
+        .burger div {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            margin: 6px;
+            transition: all 0.3s ease;
+            border-radius: 50px;
+        }
+
+        .logo img {
+            width: 50%;
+        }
+
+        .nav-links {
+            position: absolute;
+            height: 90vh;
+            top: 10vh;
+            justify-content: space-around;
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            align-items: center;
+            width: 50%;
+            right: 0px;
+
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            letter-spacing: 3px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .nav-links a:hover {
+            color: #00C2BC;
+
+        }
+
+        .nav-active {
+            transform: translateX(0%);
+        }
+
+        .toggle .line1 {
+            transform: rotate(-45deg) translate(-6px, 6px);
+        }
+
+        .toggle .line2 {
+            opacity: 0;
+        }
+
+        .toggle .line3 {
+            transform: rotate(+45deg) translate(-6px, -6px);
+        }
+
+        .footer_wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-around;
+            background-color: #1a1a1a;
+            width: 100%;
+            min-height: 50px;
+        }
+
+        .footer_img {
+
+            place-self: center center;
+        }
+
+
+        .footer_rights {
+            color: white;
+            text-align: center;
+            place-self: center center;
+        }
+
+        @media only screen and (min-width:1000px) {
+            .burger {
+                display: none;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: row;
+                position: inherit;
+                height: 8vh;
+                justify-content: space-around;
+                width: 30%;
+                transform: translateX(0%);
+
+            }
+
+            .nav-links li {
+                list-style: none;
+                margin: 0vh;
+                display: flex;
+
+
+            }
+
+
+
+        }
+
         section {
+
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             max-width: 1200px;
@@ -182,11 +318,36 @@
             }
 
         }
-
     </style>
 </head>
 
 <body>
+    <header>
+        <nav>
+
+            <div class="logo">
+                <img src="logo/soundbump-logo-04.png">
+            </div>
+
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+
+            </div>
+
+
+            <div class="nav-links">
+
+
+                <a href="index.html">Home</a>
+                <a href="om.html">About</a>
+
+
+            </div>
+        </nav>
+    </header>
+
     <div class="first_section">
         <h1 class="splash_h1">Everyone has a story.</h1>
         <h2 class="splash_h2">And so does the soundtrack to your life.</h2>
@@ -270,8 +431,18 @@
             location.href = `detaljer.html?id=${hvad._id}`
 
         }
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            //toggle nav
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+                burger.classList.toggle('toggle');
+            });
+            //burger animation
 
+        }
+
+        navSlide();
     </script>
-</body>
-
-</html>
+</body></html>
