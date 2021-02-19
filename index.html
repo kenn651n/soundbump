@@ -48,22 +48,43 @@
         const url = "https://gruppe12-b9a1.restdb.io/rest/sange";
         const medieurl = "https://gruppe12-b9a1.restdb.io/media/";
 
-        const options = {
-            headers: {
-                'x-apikey': "602a6d665ad3610fb5bb6054"
-            }
+        const header = document.querySelector("header h1");
+
+        const myHeaders = {
+            'x-apikey': "602a6d665ad3610fb5bb6054"
         };
 
+        document.addEventListener("DOMContentLoaded", start)
+
+        function start() {
+            const filterKnapper = document.querySelectorAll("nav button");
+            filterKnapper.forEach(knap => knap.addEventListener("click", filtrerSange))
+
+            hentData();
+        }
+
+        function filtrerSange() {
+            fitler = this.dataset.Genre;
+            document.querySelector(".valgt").classList.remove("valgt");
+            this.classList.add("valgt")
+            vis();
+            header.textContent = this.textContent;
+
+        }
+
         async function hentData() {
-            const respons = await fetch(url, options, );
-            const json = await respons.json();
+            const respons = await fetch("https://gruppe12-b9a1.restdb.io/rest/sange", {
+                headers: myHeaders
+            });
+            json = await respons.json();
             vis(json);
         }
 
         const main = document.querySelector("section");
         const template = document.querySelector("template").content;
+        main.textContent = "";
 
-        function vis(json) {
+        function vis() {
             console.log(json);
             json.forEach(song => {
                 const klon = template.cloneNode(true);
@@ -74,12 +95,17 @@
                 klon.querySelector(".date").textContent = song.Udgivelsesdato;
                 klon.querySelector(".genre").textContent = song.Genre;
                 klon.querySelector(".beskrivelse").textcontent = song.Beskrivelse;
+                klon.querySelector("article").addEventListener("click", () => visDetaljer(song));
                 main.appendChild(klon);
 
             })
         }
 
-        hentData();
+
+        function visDetaljer(hvad) {
+            location.href = `detaljer.html?id=${hvad._id}`
+
+        }
 
     </script>
 </body>
