@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om os</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            min-height: 8vh;
+            background-color: #1A1A1A;
+            align-items: center;
+        }
+
+        .burger div {
+            width: 30px;
+            height: 2.5px;
+            background-color: white;
+            margin: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .logo img {
+            width: 50%;
+        }
+
+        .logo li {
+            list-style: none;
+        }
+
+        .nav-links {
+            position: absolute;
+            height: 92vh;
+            top: 8vh;
+            justify-content: space-around;
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            align-items: center;
+            width: 50%;
+            right: 0px;
+            z-index: -1;
+            transform: translate(100%);
+            transition: transform 0.5s ease-in;
+        }
+
+        .nav-links li {
+            list-style: none;
+            margin-top: 15vh;
+            margin-bottom: 15vh;
+
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            letter-spacing: 3px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .nav-active {
+            transform: translateX(0%);
+        }
+
+        .toggle .line1 {
+            transform: rotate(-45deg) translate(-6.5px, 5px);
+        }
+
+        .toggle .line2 {
+            opacity: 0;
+        }
+
+        .toggle .line3 {
+            transform: rotate(+45deg) translate(-7.5px, -6px);
+        }
+
+    </style>
+</head>
+
+
+
+<body>
+    <header>
+        <nav>
+
+            <div class="logo">
+                <ul>
+                    <li><img src="logo/soundbump-logo-04.png"></li>
+                </ul>
+            </div>
+
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+
+            </div>
+
+
+            <div class="nav-links">
+
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About us</a></li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            //toggle nav
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+                burger.classList.toggle('toggle');
+            });
+            //burger animation
+
+        }
+
+        navSlide();
+
+    </script>
+</body>
+
+</html>
