@@ -51,6 +51,15 @@
 
         }
 
+        .title,
+        .artist,
+        .album,
+        .date,
+        .genre,
+        .beskrivelse {
+            padding: 10px;
+        }
+
         .burger {
             height: 31px;
         }
@@ -68,6 +77,33 @@
             width: 50%;
         }
 
+        button {
+            padding: 15px 25px;
+            font-size: 24px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            background-color: whitesmoke;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 9px #999;
+            transition: 0.5s;
+            font-family: proxima-nova, sans-serif;
+            font-weight: 200;
+            color: black;
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        button:active {
+            background-color: ;
+            box-shadow: 0 5px #00C2BC;
+            transform: translateY(4px);
+        }
+
         .nav-links {
             position: absolute;
             height: 90vh;
@@ -79,7 +115,6 @@
             align-items: center;
             width: 50%;
             right: 0px;
-
             transform: translateX(100%);
             transition: transform 0.5s ease-in;
         }
@@ -90,6 +125,8 @@
             letter-spacing: 3px;
             font-weight: bold;
             font-size: 18px;
+            font-family: proxima-nova, sans-serif;
+            font-weight: 300;
         }
 
         .nav-links a:hover {
@@ -100,6 +137,14 @@
         .nav-active {
             transform: translateX(0%);
         }
+
+        .navSecond {
+            background-color: #1A1A1A;
+            margin-top: 2rem;
+
+        }
+
+
 
         .toggle .line1 {
             transform: rotate(-45deg) translate(-6px, 6px);
@@ -289,6 +334,13 @@
                 margin-top: 1rem;
             }
 
+            /*
+            .navSecond {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            }
+*/
+
         }
 
         @media (min-width: 750px) and (max-width: 1200px) {
@@ -350,15 +402,6 @@
 
         }
 
-        .title,
-        .artist,
-        .album,
-        .date,
-        .genre,
-        .beskrivelse {
-            padding: 10px;
-        }
-
     </style>
 </head>
 
@@ -398,13 +441,17 @@
     </div>
 
     <div class="second_section">
-        <nav>
+        <nav class="navSecond">
+
             <button data-kategori="Rock">Rock</button>
             <button data-kategori="HipHop">Hip Hop</button>
             <button data-kategori="Trap">Trap</button>
+
+
             <button data-kategori="Rnb">Rnb</button>
             <button data-kategori="Pop">Pop</button>
             <button data-kategori="Indie">Indie</button>
+
         </nav>
 
     </div>
