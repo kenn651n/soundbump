@@ -163,14 +163,19 @@
 
         p {
             color: whitesmoke;
-            font-size: 1.5em;
+            font-size: 1em;
             padding: 2vh;
             font-family: proxima-nova, sans-serif;
             font-weight: 100;
         }
 
         .bold {
-            font-weight: bolder;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .bold2 {
+            font-weight: 700;
         }
 
         #eryktext {
@@ -197,42 +202,12 @@
             overflow-x: hidden;
         }
 
-        .footer_wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            justify-content: space-around;
-            background-color: #1a1a1a;
-            width: 100%;
-            min-height: 10vh;
-        }
-
-        .footer_img {
-            text-align: center;
-            place-self: center center;
-
-
-        }
-
-        .footer_img img {
-            width: 50%;
-
-        }
-
-
-        .footer_rights {
-            color: white;
-            text-align: center;
-            place-self: center center;
-        }
-
-
         @media (max-width: 400px) {
             .omos {
                 margin-left: 1em;
                 margin-right: 1em;
             }
         }
-
     </style>
 </head>
 
@@ -270,27 +245,14 @@
         <img class="omosimg" src="https://placeimg.com/400/400/people" alt="">
         <img class="omosimg" src="https://placeimg.com/400/400/people" alt="">
         <p id="lassetext"> <span class="bold">Lasse Mark Smedegaard</span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error debitis eius ipsum a eos at. Repellendus nulla fuga dolorum ratione consectetur, at. Animi, vero nesciunt sunt ipsam vitae autem soluta? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias perferendis recusandae ratione nisi quisquam! Provident aspernatur, nisi consectetur nesciunt ducimus, earum rem inventore, sequi ratione ut perferendis sapiente eos corporis.</p>
-        <p id="marcotext"> <span class="bold">Marco Nyborg</span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error debitis eius ipsum a eos at. Repellendus nulla fuga dolorum ratione consectetur, at. Animi, vero nesciunt sunt ipsam vitae autem soluta? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias perferendis recusandae ratione nisi quisquam! Provident aspernatur, nisi consectetur nesciunt ducimus, earum rem inventore, sequi ratione ut perferendis sapiente eos corporis.</p>
-        <img class="omosimg" src="https://placeimg.com/400/400/people" alt="">
+        <p id="marcotext"> <span class="bold">Marco Nyborg</span> <br> <span class="bold2">Hvem er jeg?</span> <br>
+            Mit navn er Marco Nyborg, jeg er 21 år gammel. Jeg har spanske rødder i min familie, men er født og opvokset i Danmark. Oprindelig kommer jeg fra Hvidovre, men er bosat i Ørestad på Amager nu. <br> <span class="bold2">Hvorfor er jeg startet på MMD?</span> <br>Før jeg startede her, har jeg uddannet mig som sælger, jeg tænkte derfor at denne uddannelse ville give mig muligheden for at bygge på min eksisterende uddannelse, så jeg før eller siden, kan stå for en hel forretning selv. <br> <span class="bold2">Mine interesser</span> <br>Til daglig går jeg rigtig meget op i træning, og fodbold. Har selv spillet fodbold i 18 år. På siden af det, kan jeg godt lide at rode med noget kost og træning. <br> <br> <span class="bold2">Mine sangvalg</span> <br> Call out my name - The weeknd <br> My secret lover - Private <br> Hollywood's bleeding - Post Malone.</p>
+        <img class="omosimg" src="billeder/marco.png" alt="marco">
         <img class="omosimg" src="https://placeimg.com/400/400/people" alt="">
         <p id="sajadtext"> <span class="bold">Sajad Saboor</span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error debitis eius ipsum a eos at. Repellendus nulla fuga dolorum ratione consectetur, at. Animi, vero nesciunt sunt ipsam vitae autem soluta? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias perferendis recusandae ratione nisi quisquam! Provident aspernatur, nisi consectetur nesciunt ducimus, earum rem inventore, sequi ratione ut perferendis sapiente eos corporis.</p>
 
 
     </section>
-
-    <footer>
-
-        <div class="footer_wrapper">
-            <div class="footer_img">
-                <img src="logo/soundbump-logo-04.png" alt="">
-            </div>
-            <div class="footer_rights">
-                <p>©Soundbump 2021</p>
-            </div>
-        </div>
-
-    </footer>
-
     <script>
         const navSlide = () => {
             const burger = document.querySelector('.burger');
@@ -305,8 +267,5 @@
         }
 
         navSlide();
-
     </script>
-</body>
-
-</html>
+</body></html>
