@@ -140,16 +140,17 @@
         }
 
         .titel {
-            font-size: 4em;
+            font-size: 3em;
             color: #00C2BC;
             text-align: center;
             margin-bottom: 5vh;
             margin-top: 5vh;
+            font-family: proxima-nova, sans-serif;
         }
 
         .omos {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             grid-gap: 1em;
             margin: 0 auto;
             width: 80%;
@@ -164,6 +165,8 @@
             color: whitesmoke;
             font-size: 1.5em;
             padding: 2vh;
+            font-family: proxima-nova, sans-serif;
+            font-weight: 100;
         }
 
         .bold {
@@ -190,6 +193,16 @@
             border: 1px solid whitesmoke;
         }
 
+        html {
+            overflow-x: hidden;
+        }
+
+        @media (max-width: 400px) {
+            .omos {
+                margin-left: 1em;
+                margin-right: 1em;
+            }
+        }
     </style>
 </head>
 
@@ -248,8 +261,5 @@
         }
 
         navSlide();
-
     </script>
-</body>
-
-</html>
+</body></html>
