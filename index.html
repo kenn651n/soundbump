@@ -4,8 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <title></title>
     <style>
+        html {
+            overflow-x: hidden;
+        }
+
         * {
             margin: 0px;
             padding: 0px;
@@ -166,7 +187,8 @@
 
         article:hover {
             transform: scale(1.1);
-            box-shadow: 5px 10px 30px #00C2BC;
+            /*            box-shadow: 5px 10px 30px #00C2BC;*/
+            box-shadow: 0px 0px 19px 5px rgba(0, 194, 188, 0.75);
 
         }
 
@@ -321,25 +343,18 @@
 
         }
 
+        .title,
+        .artist,
+        .album,
+        .date,
+        .genre,
+        .beskrivelse {
+            padding: 10px;
+        }
+
     </style>
 </head>
-<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-<link rel="manifest" href="favicon/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+
 
 <body>
     <header>
@@ -372,6 +387,18 @@
         <h1 class="splash_h1">Everyone has a story.</h1>
         <h2 class="splash_h2">And so does the soundtrack to your life.</h2>
         <h3 class="splash_h3">Discover how your favorite songs were created.</h3>
+
+    </div>
+
+    <div class="second_section">
+        <nav>
+            <button data-kategori="Rock">Rock</button>
+            <button data-kategori="Hip Hop">Hip Hop</button>
+            <button data-kategori="Trap">Trap</button>
+            <button data-kategori="Rnb">Rnb</button>
+            <button data-kategori="Pop">Pop</button>
+            <button data-kategori="Indie">Indie</button>
+        </nav>
 
     </div>
 
