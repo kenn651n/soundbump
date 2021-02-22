@@ -5,6 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <style>
         * {
             margin: 0px;
@@ -26,6 +43,7 @@
             min-height: 10vh;
             background-color: black;
             align-items: center;
+            font-family: proxima-nova, sans-serif;
 
         }
 
@@ -123,17 +141,18 @@
         }
 
         .titel {
-            font-size: 4em;
+            font-size: 3em;
             color: #00C2BC;
             text-align: center;
             margin-bottom: 5vh;
             margin-top: 5vh;
+            font-family: proxima-nova, sans-serif;
         }
 
         .omos {
             display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-gap: 1em;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-gap: 1em;
             margin: 0 auto;
             width: 80%;
             max-width: 1080px;
@@ -145,31 +164,83 @@
 
         p {
             color: whitesmoke;
-            font-size: 1.5em;
+            font-size: 1em;
             padding: 2vh;
+            font-family: proxima-nova, sans-serif;
+            font-weight: 100;
         }
 
         .bold {
-            font-weight: bolder;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .bold2 {
+            font-weight: 700;
         }
 
         #eryktext {
             border: 1px solid whitesmoke;
         }
+
         #kennethtext {
             border: 1px solid whitesmoke;
         }
+
         #lassetext {
             border: 1px solid whitesmoke;
         }
+
         #marcotext {
             border: 1px solid whitesmoke;
         }
+
         #sajadtext {
             border: 1px solid whitesmoke;
         }
 
+        html {
+            overflow-x: hidden;
+        }
 
+        @media (max-width: 400px) {
+            .omos {
+                margin-left: 1em;
+                margin-right: 1em;
+            }
+        }
+
+        .footer_wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-around;
+            background-color: #1a1a1a;
+            width: 100%;
+            min-height: 10vh;
+        }
+
+        .footer_img {
+            text-align: center;
+            place-self: center center;
+
+
+        }
+
+        .footer_img img {
+            width: 50%;
+
+        }
+
+
+        .footer_rights {
+            color: white;
+            text-align: center;
+            place-self: center center;
+        }
+
+        footer {
+            margin-top: 5vh;
+        }
     </style>
 </head>
 
@@ -201,19 +272,49 @@
     </header>
     <h1 class="titel">ABOUT US</h1>
     <section class="omos">
-            <img class="omosimg" src="https://placeimg.com/400/400/people" alt="">
-            <p id="eryktext"> <span class="bold">Eryk Piotr Munk</span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error debitis eius ipsum a eos at. Repellendus nulla fuga dolorum ratione consectetur, at. Animi, vero nesciunt sunt ipsam vitae autem soluta? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias perferendis recusandae ratione nisi quisquam! Provident aspernatur, nisi consectetur nesciunt ducimus, earum rem inventore, sequi ratione ut perferendis sapiente eos corporis.</p>
-            <p id="kennethtext"> <span class="bold">Kenneth Oberes Petersen</span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error debitis eius ipsum a eos at. Repellendus nulla fuga dolorum ratione consectetur, at. Animi, vero nesciunt sunt ipsam vitae autem soluta? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias perferendis recusandae ratione nisi quisquam! Provident aspernatur, nisi consectetur nesciunt ducimus, earum rem inventore, sequi ratione ut perferendis sapiente eos corporis.</p>
-            <img class="omosimg" src="https://placeimg.com/400/400/people" alt="">
-            <img class="omosimg" src="https://placeimg.com/400/400/people" alt="">
-            <p id="lassetext"> <span class="bold">Lasse Mark Smedegaard</span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error debitis eius ipsum a eos at. Repellendus nulla fuga dolorum ratione consectetur, at. Animi, vero nesciunt sunt ipsam vitae autem soluta? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias perferendis recusandae ratione nisi quisquam! Provident aspernatur, nisi consectetur nesciunt ducimus, earum rem inventore, sequi ratione ut perferendis sapiente eos corporis.</p>
-            <p id="marcotext"> <span class="bold">Marco Nyborg</span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error debitis eius ipsum a eos at. Repellendus nulla fuga dolorum ratione consectetur, at. Animi, vero nesciunt sunt ipsam vitae autem soluta? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias perferendis recusandae ratione nisi quisquam! Provident aspernatur, nisi consectetur nesciunt ducimus, earum rem inventore, sequi ratione ut perferendis sapiente eos corporis.</p>
-            <img class="omosimg" src="https://placeimg.com/400/400/people" alt="">
-            <img class="omosimg" src="https://placeimg.com/400/400/people" alt="">
-            <p id="sajadtext"> <span class="bold">Sajad Saboor</span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error debitis eius ipsum a eos at. Repellendus nulla fuga dolorum ratione consectetur, at. Animi, vero nesciunt sunt ipsam vitae autem soluta? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias perferendis recusandae ratione nisi quisquam! Provident aspernatur, nisi consectetur nesciunt ducimus, earum rem inventore, sequi ratione ut perferendis sapiente eos corporis.</p>
+        <img class="omosimg" src="https://placeimg.com/400/400/people" alt="">
+        <p id="eryktext"> <span class="bold">Eryk Piotr Munk</span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error debitis eius ipsum a eos at. Repellendus nulla fuga dolorum ratione consectetur, at. Animi, vero nesciunt sunt ipsam vitae autem soluta? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias perferendis recusandae ratione nisi quisquam! Provident aspernatur, nisi consectetur nesciunt ducimus, earum rem inventore, sequi ratione ut perferendis sapiente eos corporis.</p>
+
+        <p id="kennethtext"> <span class="bold">Kenneth Oberes Petersen</span> <br> <br>
+            <span class="bold2">Hvem er jeg?</span><br>
+            Jeg hedder Kenneth Oberes Petersen og jeg er 23 år gammel. Jeg er født og opvokset I Tønder, men etnisk er jeg halv dansk og halv filippiner. <br><br>
+
+            <span class="bold2">Mine interesser</span><br>
+            Jeg interesserer mig meget inde for madlavning, gaming og beatbox. Jeg har arbejdet på en sushirestaurant og derefter to veganske restauranter som kok, og det har jeg gjort I 4 år. <br><br>
+            <span class="bold2">Derfor er jeg startet på MMD</span><br>
+
+            Jeg er startet på MMD, da jeg har været meget interesseret I mediefag da jeg gik på HF. Der filmede jeg mest og lavede video redigering, men jeg synes også kodning og design er virkelig spændende ting jeg vil få gavn af. <br><br>
+
+            <span class="bold2">Mine sangvalg</span> <br>
+            Frank Ocean - Nikes<br>
+            Frank Ocean - Ivy<br>
+            Frank Ocean - Pink + white<br>
+
+        </p>
+
+        <img class="omosimg" src="https://placeimg.com/400/400/people" alt="">
+        <img class="omosimg" src="https://placeimg.com/400/400/people" alt="">
+        <p id="lassetext"> <span class="bold">Lasse Mark Smedegaard</span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error debitis eius ipsum a eos at. Repellendus nulla fuga dolorum ratione consectetur, at. Animi, vero nesciunt sunt ipsam vitae autem soluta? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias perferendis recusandae ratione nisi quisquam! Provident aspernatur, nisi consectetur nesciunt ducimus, earum rem inventore, sequi ratione ut perferendis sapiente eos corporis.</p>
+        <p id="marcotext"> <span class="bold">Marco Nyborg</span> <br> <span class="bold2">Hvem er jeg?</span> <br>
+            Mit navn er Marco Nyborg, jeg er 21 år gammel. Jeg har spanske rødder i min familie, men er født og opvokset i Danmark. Oprindelig kommer jeg fra Hvidovre, men er bosat i Ørestad på Amager nu. <br> <span class="bold2">Hvorfor er jeg startet på MMD?</span> <br>Før jeg startede her, har jeg uddannet mig som sælger, jeg tænkte derfor at denne uddannelse ville give mig muligheden for at bygge på min eksisterende uddannelse, så jeg før eller siden, kan stå for en hel forretning selv. <br> <span class="bold2">Mine interesser</span> <br>Til daglig går jeg rigtig meget op i træning, og fodbold. Har selv spillet fodbold i 18 år. På siden af det, kan jeg godt lide at rode med noget kost og træning. <br> <br> <span class="bold2">Mine sangvalg</span> <br> Call out my name - The weeknd <br> My secret lover - Private <br> Hollywood's bleeding - Post Malone.</p>
+        <img class="omosimg" src="billeder/marco.png" alt="marco">
+        <img class="omosimg" src="https://placeimg.com/400/400/people" alt="">
+        <p id="sajadtext"> <span class="bold">Sajad Saboor</span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error debitis eius ipsum a eos at. Repellendus nulla fuga dolorum ratione consectetur, at. Animi, vero nesciunt sunt ipsam vitae autem soluta? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias perferendis recusandae ratione nisi quisquam! Provident aspernatur, nisi consectetur nesciunt ducimus, earum rem inventore, sequi ratione ut perferendis sapiente eos corporis.</p>
 
 
     </section>
+    <footer>
+
+        <div class="footer_wrapper">
+            <div class="footer_img">
+                <img src="logo/soundbump-logo-04.png" alt="">
+            </div>
+            <div class="footer_rights">
+                <p>©Soundbump 2021</p>
+            </div>
+        </div>
+
+    </footer>
     <script>
         const navSlide = () => {
             const burger = document.querySelector('.burger');
