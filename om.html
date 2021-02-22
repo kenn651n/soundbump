@@ -208,6 +208,38 @@
                 margin-right: 1em;
             }
         }
+
+        .footer_wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-around;
+            background-color: #1a1a1a;
+            width: 100%;
+            min-height: 10vh;
+        }
+
+        .footer_img {
+            text-align: center;
+            place-self: center center;
+
+
+        }
+
+        .footer_img img {
+            width: 50%;
+
+        }
+
+
+        .footer_rights {
+            color: white;
+            text-align: center;
+            place-self: center center;
+        }
+
+        footer {
+            margin-top: 5vh;
+        }
     </style>
 </head>
 
@@ -253,6 +285,18 @@
 
 
     </section>
+    <footer>
+
+        <div class="footer_wrapper">
+            <div class="footer_img">
+                <img src="logo/soundbump-logo-04.png" alt="">
+            </div>
+            <div class="footer_rights">
+                <p>©Soundbump 2021</p>
+            </div>
+        </div>
+
+    </footer>
     <script>
         const navSlide = () => {
             const burger = document.querySelector('.burger');
