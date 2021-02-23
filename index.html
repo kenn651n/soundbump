@@ -463,7 +463,7 @@
 
     <div class="second_section">
         <nav class="navSecond">
-            <button data-kategori="Rock">Rock</button>
+            <button data-kategori="Rock" class="valgt">Rock</button>
             <button data-kategori="HipHop">Hip Hop</button>
             <button data-kategori="Trap">Trap</button>
             <button data-kategori="Rnb">Rnb</button>
@@ -525,7 +525,7 @@
         document.addEventListener("DOMContentLoaded", start)
 
         function start() {
-            const filterKnapper = document.querySelectorAll("nav button");
+            const filterKnapper = document.querySelectorAll(".navSecond");
             filterKnapper.forEach(knap => knap.addEventListener("click", filtrerSange))
 
             hentData();
