@@ -79,10 +79,180 @@
             color: whitesmoke;
         }
 
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            min-height: 10vh;
+            background-color: black;
+            align-items: center;
+            font-family: proxima-nova, sans-serif;
+
+        }
+
+        .burger {
+            height: 31px;
+        }
+
+        .burger div {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            margin: 6px;
+            transition: all 0.3s ease;
+            border-radius: 50px;
+        }
+
+        .logo img {
+            width: 50%;
+        }
+
+        .nav-links {
+            position: absolute;
+            height: 90vh;
+            top: 10vh;
+            justify-content: space-around;
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            align-items: center;
+            width: 50%;
+            right: 0px;
+            z-index: +1;
+
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            letter-spacing: 3px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .nav-links a:hover {
+            color: #00C2BC;
+
+        }
+
+        .nav-active {
+            transform: translateX(0%);
+        }
+
+        .toggle .line1 {
+            transform: rotate(-45deg) translate(-6px, 6px);
+        }
+
+        .toggle .line2 {
+            opacity: 0;
+        }
+
+        .toggle .line3 {
+            transform: rotate(+45deg) translate(-6px, -6px);
+        }
+
+        @media only screen and (min-width:1000px) {
+            .burger {
+                display: none;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: row;
+                position: inherit;
+                height: 8vh;
+                justify-content: space-around;
+                width: 30%;
+                transform: translateX(0%);
+
+            }
+
+            .nav-links li {
+                list-style: none;
+                margin: 0vh;
+                display: flex;
+
+
+            }
+
+        }
+
+        .footer_wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-around;
+            background-color: #1a1a1a;
+            width: 100%;
+            min-height: 10vh;
+        }
+
+        .footer_img {
+            text-align: center;
+            place-self: center center;
+
+
+        }
+
+        .footer_img img {
+            width: 50%;
+
+        }
+
+
+        .footer_rights {
+            color: white;
+            text-align: center;
+            place-self: center center;
+        }
+
+        footer {
+            margin-top: 5vh;
+        }
+
     </style>
 </head>
 
 <body>
+    <header>
+        <nav>
+
+            <div class="logo">
+                <img src="logo/soundbump-logo-04.png">
+            </div>
+
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+
+            </div>
+
+
+            <div class="nav-links">
+
+
+                <a href="index.html">Home</a>
+                <a href="om.html">About</a>
+
+
+            </div>
+        </nav>
+    </header>
     <article>
         <img src="" alt="" class="billede">
         <h1 class="title"></h1>
@@ -93,6 +263,18 @@
         <p class="beskrivelse"></p>
     </article>
     <button>back to the 80's</button>
+    <footer>
+
+        <div class="footer_wrapper">
+            <div class="footer_img">
+                <img src="logo/soundbump-logo-04.png" alt="">
+            </div>
+            <div class="footer_rights">
+                <p>©Soundbump 2021</p>
+            </div>
+        </div>
+
+    </footer>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const id = urlParams.get("id");
@@ -135,6 +317,20 @@
             history.back();
 
         }
+
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            //toggle nav
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+                burger.classList.toggle('toggle');
+            });
+            //burger animation
+
+        }
+
+        navSlide();
 
     </script>
 </body>
