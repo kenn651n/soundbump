@@ -281,6 +281,10 @@
             color: #00C2BC;
         }
 
+        .valgt {
+            color: black;
+        }
+
         @media (min-width: 350px) and (max-width: 750px) {
 
             .splash_h1 {
@@ -463,12 +467,13 @@
 
     <div class="second_section">
         <nav class="navSecond">
-            <button data-kategori="Rock" class="valgt">Rock</button>
-            <button data-kategori="HipHop">Hip Hop</button>
-            <button data-kategori="Trap">Trap</button>
-            <button data-kategori="Rnb">Rnb</button>
-            <button data-kategori="Pop">Pop</button>
-            <button data-kategori="Indie">Indie</button>
+            <button data-genre="alle" class="valgt">Alle</button>
+            <button data-genre="Rock">Rock</button>
+            <!--            <button data-genre="Hiphop">Hip Hop</button>-->
+            <!--            <button data-genre="Trap">Trap</button>-->
+            <button data-genre="R&B">R&B</button>
+            <button data-genre="Pop">Pop</button>
+            <!--            <button data-genre="Indie">Indie</button>-->
         </nav>
 
     </div>
@@ -513,30 +518,38 @@
 
 
     <script>
+        "use strict";
         const url = "https://gruppe12-b9a1.restdb.io/rest/sange";
         const medieurl = "https://gruppe12-b9a1.restdb.io/media/";
+        let json;
 
-        const header = document.querySelector("header h1");
+        //        const header = document.querySelector("header h1");
 
         const myHeaders = {
             'x-apikey': "602a6d665ad3610fb5bb6054"
         };
 
         document.addEventListener("DOMContentLoaded", start)
+        let filter = "alle";
 
         function start() {
-            const filterKnapper = document.querySelectorAll(".navSecond");
-            filterKnapper.forEach(knap => knap.addEventListener("click", filtrerSange))
+            const filterKnapper = document.querySelectorAll(".navSecond button");
+            filterKnapper.forEach(knap => {
+                console.log("For each ", knap)
+                knap.addEventListener("click", filtrerSange)
+            })
 
             hentData();
         }
 
         function filtrerSange() {
-            fitler = this.dataset.Genre;
+            filter = this.dataset.genre;
             document.querySelector(".valgt").classList.remove("valgt");
             this.classList.add("valgt")
+            console.log("filter", filter);
+
             vis();
-            header.textContent = this.textContent;
+            //            header.textContent = this.textContent;
 
         }
 
@@ -550,21 +563,27 @@
 
         const main = document.querySelector("section");
         const template = document.querySelector("template").content;
-        main.textContent = "";
+
 
         function vis() {
-            console.log(json);
+            main.textContent = "";
+            //            console.log(json);
             json.forEach(song => {
-                const klon = template.cloneNode(true);
-                klon.querySelector(".billede").src = medieurl + song.Billede;
-                klon.querySelector(".title").textContent = song.Sang;
-                klon.querySelector(".artist").textContent = song.Kunstner;
-                klon.querySelector(".album").textContent = song.Album;
-                klon.querySelector(".date").textContent = song.Udgivelsesdato;
-                klon.querySelector(".genre").textContent = song.Genre;
-                klon.querySelector(".beskrivelse").textcontent = song.Beskrivelse;
-                klon.querySelector("article").addEventListener("click", () => visDetaljer(song));
-                main.appendChild(klon);
+                console.log("song.genre", song.Genre);
+                console.log("song.genre", filter == song.Genre);
+                if (filter == song.Genre || filter == "alle") {
+                    const klon = template.cloneNode(true);
+                    klon.querySelector(".billede").src = medieurl + song.Billede;
+                    klon.querySelector(".title").textContent = song.Sang;
+                    klon.querySelector(".artist").textContent = song.Kunstner;
+                    klon.querySelector(".album").textContent = song.Album;
+                    klon.querySelector(".date").textContent = song.Udgivelsesdato;
+                    klon.querySelector(".genre").textContent = song.Genre;
+                    klon.querySelector(".beskrivelse").textcontent = song.Beskrivelse;
+                    klon.querySelector("article").addEventListener("click", () => visDetaljer(song));
+                    main.appendChild(klon);
+                }
+
 
             })
         }
