@@ -8,22 +8,77 @@
 </head>
 
 <body>
+    <section Class="section_wrapper">
+
+        <a href=index.html><button href="index.html">Let's get started</button></a>
+
+    </section>
+
+
 </body>
+
 <style>
     body {
         margin: 0;
     }
-html {
-    background: url(billeder/forside.jpg) no-repeat center fixed;
-    background-size: cover;
-}
 
-    @media (max-width: 750px){
+    html {
+        background: url(billeder/forside.jpg) no-repeat center fixed;
+        background-size: cover;
+    }
+
+    .section_wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        height: 100vh;
+    }
+
+    a {
+        grid-column: 2/3;
+        grid-row: 3/3;
+        place-self: center center;
+
+    }
+
+    button {
+        padding: 15px 25px;
+        font-size: 2vw;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        background-color: #00C2BC;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 9px #999;
+        transition: 0.5s;
+        font-family: proxima-nova, sans-serif;
+        font-weight: 400;
+        color: black;
+
+        max-width: 20vw;
+        max-height: 10vh;
+    }
+
+    button:hover {
+        background-color: black;
+        color: white;
+    }
+
+    button:active {
+        background-color: ;
+        box-shadow: 0 5px #00C2BC;
+        transform: translateY(4px);
+    }
+
+
+    @media (max-width: 750px) {
         html {
             background: url(billeder/forside2.jpg) no-repeat center fixed;
             background-size: cover;
         }
     }
+
 </style>
 
 </html>
