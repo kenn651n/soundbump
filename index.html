@@ -144,8 +144,6 @@
 
         }
 
-
-
         .toggle .line1 {
             transform: rotate(-45deg) translate(-6px, 6px);
         }
@@ -186,6 +184,7 @@
             place-self: center center;
         }
 
+        /*
         @media only screen and (min-width:1000px) {
             .burger {
                 display: none;
@@ -213,6 +212,7 @@
 
 
         }
+*/
 
         section {
 
@@ -353,6 +353,34 @@
             button {
                 margin-left: 25px;
                 margin-right: 25px;
+            }
+
+
+
+        }
+
+        @media only screen and (min-width:1000px) {
+            .burger {
+                display: none;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: row;
+                position: inherit;
+                height: 8vh;
+                justify-content: space-around;
+                width: 30%;
+                transform: translateX(0%);
+
+            }
+
+            .nav-links li {
+                list-style: none;
+                margin: 0vh;
+                display: flex;
+
+
             }
 
 
