@@ -426,7 +426,6 @@
 
 
         }
-
     </style>
 </head>
 
@@ -488,7 +487,6 @@
             <h3 class="album"></h3>
             <h4 class="date"></h4>
             <p class="genre"></p>
-            <p class="beskrivelse"></p>
         </article>
     </template>
 
@@ -579,11 +577,9 @@
                     klon.querySelector(".album").textContent = song.Album;
                     klon.querySelector(".date").textContent = song.Udgivelsesdato;
                     klon.querySelector(".genre").textContent = song.Genre;
-                    klon.querySelector(".beskrivelse").textcontent = song.Beskrivelse;
                     klon.querySelector("article").addEventListener("click", () => visDetaljer(song));
                     main.appendChild(klon);
                 }
-
 
             })
         }
@@ -606,8 +602,5 @@
         }
 
         navSlide();
-
     </script>
-</body>
-
-</html>
+</body></html>
