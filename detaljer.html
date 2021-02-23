@@ -23,12 +23,16 @@
     <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <style>
-        section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        .section {
+            display: flex;
+            flex-direction: row;
             /*            max-width: 1000px;*/
             margin-right: 15vw;
             margin-left: 15vw;
+        }
+
+        .row {
+            margin-top: 2.3vw;
         }
 
         body {
@@ -37,17 +41,18 @@
         }
 
         article {
-            margin-top: -15vw;
+
+            /*
             display: flex;
             justify-content: center;
             flex-direction: column;
             text-align: center;
+*/
         }
 
         article img {
-            max-width: 100%;
-            transform: scale(0.7);
-            margin-bottom: -10vw;
+            transform: scale(0.8);
+
         }
 
         h1 {
@@ -190,6 +195,8 @@
 
             }
 
+
+
         }
 
         .footer_wrapper {
@@ -224,6 +231,54 @@
             margin-top: 5vh;
         }
 
+        button:active {
+            background-color: ;
+            box-shadow: 0 5px #00C2BC;
+            transform: translateY(4px);
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        button {
+            padding: 15px 25px;
+            font-size: 2vw;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            outline: none;
+            background-color: #00C2BC;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 9px #999;
+            transition: 0.5s;
+            font-family: proxima-nova, sans-serif;
+            font-weight: 400;
+            color: black;
+
+        }
+
+        .knap {
+            margin-top: 1vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (min-width: 350px) and (max-width: 750px) {
+            .section {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                /*            max-width: 1000px;*/
+                margin-right: 15vw;
+                margin-left: 15vw;
+            }
+
+        }
+
     </style>
 </head>
 
@@ -253,6 +308,22 @@
             </div>
         </nav>
     </header>
+    <div class="section">
+        <article>
+            <img src="" alt="" class="billede">
+        </article>
+        <article class="row">
+            <!--            <img src="" alt="" class="billede">-->
+            <h1 class="title"></h1>
+            <h2 class="artist"></h2>
+            <h3 class="album"></h3>
+            <h4 class="date"></h4>
+            <p class="genre"></p>
+            <p class="beskrivelse"></p>
+        </article>
+
+    </div>
+    <!--
     <article>
         <img src="" alt="" class="billede">
         <h1 class="title"></h1>
@@ -262,7 +333,10 @@
         <p class="genre"></p>
         <p class="beskrivelse"></p>
     </article>
-    <button>back to the 80's</button>
+-->
+    <div class="knap">
+        <button class="knap">Go back</button>
+    </div>
     <footer>
 
         <div class="footer_wrapper">
@@ -292,21 +366,21 @@
                 headers: myHeaders
             });
             json = await respons.json();
-            console.log("json", json)
+            json.Formateretdato = new Date(json.Udgivelsesdato).toLocaleDateString()
             vis();
         }
 
-        //        const main = document.querySelector("section");
+        //        const main = document.querySelector("section")
         //        const template = document.querySelector("template").content;
 
         function vis() {
             document.querySelector(".billede").src = medieurl + json.Billede;
-            document.querySelector(".title").textContent = json.Sang;
-            document.querySelector(".artist").textContent = json.Kunstner;
-            document.querySelector(".album").textContent = json.Album;
-            document.querySelector(".date").textContent = json.Udgivelsesdato;
-            document.querySelector(".genre").textContent = json.Genre;
-            document.querySelector(".beskrivelse").textcontent = json.Beskrivelse;
+            document.querySelector(".title").textContent = `Song:  ${json.Sang}`;
+            document.querySelector(".artist").textContent = `by: ${json.Kunstner}`;
+            document.querySelector(".album").textContent = `Album: ${json.Album}`;
+            document.querySelector(".date").textContent = `Date of release: ${json.Formateretdato}`;
+            document.querySelector(".genre").textContent = `Genre: ${json.Genre}`;
+            document.querySelector(".beskrivelse").textContent = `Beskrivelse: ${json.Beskrivelse}`;
             document.querySelector("button").addEventListener("click", tilbage);
 
         }

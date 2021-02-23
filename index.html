@@ -556,7 +556,11 @@
                 headers: myHeaders
             });
             json = await respons.json();
-            vis(json);
+            json.forEach(song => {
+                song.Formateretdato = new Date(song.Udgivelsesdato).toLocaleDateString()
+            })
+            //            json.Udgivelsesdato = new Date()
+            vis();
         }
 
         const main = document.querySelector("section");
@@ -565,17 +569,17 @@
 
         function vis() {
             main.textContent = "";
+
             //            console.log(json);
             json.forEach(song => {
-                console.log("song.genre", song.Genre);
-                console.log("song.genre", filter == song.Genre);
+                //                console.log("song.genre", song.Genre);// console.log("song.genre", filter == song.Genre);
                 if (filter == song.Genre || filter == "alle") {
                     const klon = template.cloneNode(true);
                     klon.querySelector(".billede").src = medieurl + song.Billede;
                     klon.querySelector(".title").textContent = song.Sang;
                     klon.querySelector(".artist").textContent = song.Kunstner;
                     klon.querySelector(".album").textContent = song.Album;
-                    klon.querySelector(".date").textContent = song.Udgivelsesdato;
+                    klon.querySelector(".date").textContent = song.Formateretdato;
                     klon.querySelector(".genre").textContent = song.Genre;
                     klon.querySelector("article").addEventListener("click", () => visDetaljer(song));
                     main.appendChild(klon);
