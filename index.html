@@ -265,18 +265,6 @@
             text-align: center;
             padding-top: 20rem;
             padding-right: 50rem;
-            /*
-            text-shadow:
-            0 1px #808d93,
-            -1px 0 black,
-            -1px 2px #808d93,
-            -2px 1px black,
-            -2px 3px #808d93,
-            -3px 2px black,
-            -3px 4px #808d93,
-            -4px 3px black,
-            -4px 5px #808d93;
-*/
             text-shadow: 0 1px 0 black,
                 0 2px 0 black,
                 0 3px 0 black,
@@ -298,21 +286,6 @@
             color: whitesmoke;
             font-style: italic;
             margin-bottom: 1rem;
-
-
-            /*
-            text-shadow:
-                1px 0px 1px #00C2BC, 0px 1px 1px black,
-                2px 1px 1px #00C2BC, 1px 2px 1px black,
-                3px 2px 1px #00C2BC, 2px 3px 1px black,
-                4px 3px 1px #00C2BC, 3px 4px 1px black,
-                5px 4px 1px #00C2BC, 4px 5px 1px black,
-                6px 5px 1px #00C2BC, 5px 6px 1px black,
-                7px 6px 1px #00C2BC;
-
-
-            text-shadow: 0px 0px 19px 5px #00C2BC;
-*/
             text-shadow:
                 0 1px #808d93,
                 -1px 0 black,
@@ -517,7 +490,7 @@
         </nav>
     </header>
 
-    <!-- Implementering af splashbillede og landingpage tekst -->
+    <!-- Implementering af splashbillede i CSS og landingpage tekst -->
     <div class="first_section">
         <h1 class="splash_h1">Everyone has a story.</h1>
         <h2 class="splash_h2">And so does the soundtrack to your life.</h2>
@@ -540,6 +513,8 @@
 
     </div>
 
+    <!-- sang-artikler -->
+
     <section></section>
 
     <template>
@@ -552,6 +527,8 @@
             <p class="genre"></p>
         </article>
     </template>
+
+    <!-- footer med logo -->
 
     <footer>
 
@@ -629,13 +606,11 @@
         const main = document.querySelector("section");
         const template = document.querySelector("template").content;
 
+        // function som viser information om sang på fosiden
 
         function vis() {
             main.textContent = "";
-
-            //            console.log(json);
             json.forEach(song => {
-                //                console.log("song.genre", song.Genre);// console.log("song.genre", filter == song.Genre);
                 if (filter == song.Genre || filter == "alle") {
                     const klon = template.cloneNode(true);
                     klon.querySelector(".billede").src = medieurl + song.Billede;
@@ -651,6 +626,7 @@
             })
         }
 
+        // function der viser single-view med uddybende beskrivelse om sangen
 
         function visDetaljer(hvad) {
             location.href = `detaljer.html?id=${hvad._id}`
