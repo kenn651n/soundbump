@@ -144,11 +144,13 @@
 
         }
 
+        /*Giver baggrundsfarve til hele dokumentet*/
         body {
             background-color: #1A1A1A;
 
         }
 
+        /*Styler overskriften*/
         .titel {
             font-size: 3em;
             color: #00C2BC;
@@ -158,6 +160,7 @@
             font-family: proxima-nova, sans-serif;
         }
 
+        /*Section styling*/
         .omos {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -171,6 +174,7 @@
             width: 100%;
         }
 
+        /*Styler p tags*/
         p {
             color: whitesmoke;
             font-size: 1.4vw;
@@ -179,6 +183,7 @@
             font-weight: 100;
         }
 
+        /*Styler udvalgte textstykker med fed*/
         .bold {
             font-weight: bold;
             font-size: 1.1em;
@@ -188,7 +193,7 @@
             font-weight: 700;
         }
 
-
+        /*Tilføjer border til alle textafsnit*/
         #eryktext {
             border: 1px solid whitesmoke;
         }
@@ -209,11 +214,12 @@
             border: 1px solid whitesmoke;
         }
 
-
+        /*Gør så man ikke kan scroll til siden*/
         html {
             overflow-x: hidden;
         }
 
+        /*Ændret margin på mindre skærm*/
         @media (max-width: 400px) {
             .omos {
                 margin-left: 1em;
@@ -255,7 +261,7 @@
             margin-top: 5vh;
         }
 
-
+        /*Gør fonten større på mindre skærm ifht tidligere måleforhold*/
         @media (max-width: 750px) {
             p {
                 font-size: 2vw;
@@ -290,8 +296,13 @@
             </div>
         </nav>
     </header>
+    <!--Overskrift-->
     <h1 class="titel">ABOUT US</h1>
+    <!--Her starter sectionen-->
     <section class="omos">
+
+        <!--Afsnit om Eryk-->
+
         <img class="omosimg" src="billeder/eryk.JPG" alt="">
         <p id="marcotext"> <span class="bold">Eryk Piotr Munk</span> <br> <span class="bold2">Hvem er jeg?</span> <br>
             Mit navn er Eryk, jeg 20 år gammel og kommer fra Odsherred. Til daglig arbejder jeg som SoMe studentermedhjælper hos virksomheden Bubly Training, og bor i en lille lejlighed i Rødovre.
@@ -301,6 +312,8 @@
             <br>
             <span class="bold2">Mine sangvalg</span> <br> Breathin - Ariana Grande <br> God is a Woman - Ariana Grande <br> 7 Rings - Ariana Grande
         </p>
+
+        <!--Afsnit om Eryk-->
 
         <p id="kennethtext"> <span class="bold">Kenneth Oberes Petersen</span> <br> <br>
             <span class="bold2">Hvem er jeg?</span><br>
@@ -320,13 +333,23 @@
         </p>
 
         <img class="omosimg" src="billeder/kenny.jpg" alt="Kenny">
+
+        <!--Afsnit om Lasse-->
+
         <img class="omosimg" src="https://placeimg.com/400/400/people" alt="">
         <p id="lassetext"> <span class="bold">Lasse Mark Smedegaard</span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error debitis eius ipsum a eos at. Repellendus nulla fuga dolorum ratione consectetur, at. Animi, vero nesciunt sunt ipsam vitae autem soluta? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias perferendis recusandae ratione nisi quisquam! Provident aspernatur, nisi consectetur nesciunt ducimus, earum rem inventore, sequi ratione ut perferendis sapiente eos corporis.</p>
+
+        <!--Afsnit om Marco-->
+
         <p id="marcotext"> <span class="bold">Marco Nyborg</span> <br> <span class="bold2">Hvem er jeg?</span> <br>
             Mit navn er Marco Nyborg, jeg er 21 år gammel. Jeg har spanske rødder i min familie, men er født og opvokset i Danmark. Oprindelig kommer jeg fra Hvidovre, men er bosat i Ørestad på Amager nu. <br> <span class="bold2">Hvorfor er jeg startet på MMD?</span> <br>Før jeg startede her, har jeg uddannet mig som sælger, jeg tænkte derfor at denne uddannelse ville give mig muligheden for at bygge på min eksisterende uddannelse, så jeg før eller siden, kan stå for en hel forretning selv. <br> <span class="bold2">Mine interesser</span> <br>Til daglig går jeg rigtig meget op i træning, og fodbold. Har selv spillet fodbold i 18 år. På siden af det, kan jeg godt lide at rode med noget kost og træning. <br> <br> <span class="bold2">Mine sangvalg</span> <br> Call out my name - The weeknd <br> My secret lover - Private <br> Hollywood's bleeding - Post Malone.</p>
         <img class="omosimg" src="billeder/marco.png" alt="marco">
-        <img class="omosimg" src="https://placeimg.com/400/400/people" alt="">
-        <p id="sajadtext"> <span class="bold">Sajad Saboor</span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error debitis eius ipsum a eos at. Repellendus nulla fuga dolorum ratione consectetur, at. Animi, vero nesciunt sunt ipsam vitae autem soluta? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias perferendis recusandae ratione nisi quisquam! Provident aspernatur, nisi consectetur nesciunt ducimus, earum rem inventore, sequi ratione ut perferendis sapiente eos corporis.</p>
+
+
+        <!--Afsnit om Sajad-->
+
+        <img class="omosimg" src="billeder/sajad.jpg" alt="">
+        <p id="sajadtext"> <span class="bold">Sajad Saboor</span> <br><br> <b>Hvem er jeg?</b> <br>Mit navn er Sajad Saboor, jeg er 26 år gammel, og er oprindeligt fra Afghanistan, og er bosat i Aalborg. <br><br><b>Hvorfor er jeg startet på MMD?<br></b>Før jeg begyndte på MMD læste jeg medicin, og imens lavede jeg hjemmesider, jeg fandt hurtigt ud af at hjemmesiderne sagde mig mere end at snakke med patienter. <br><br><b>Mine interesser</b><br>Jeg elsker at spille klaver, tilbringe tid med min familie og træne. Derudover går jeg helt vildt meget op i dybdegående film. <br><br><b>Mine sange</b><br>Duke Dumond - Ocean Drive <br> The Weeknd - Die For You <br> Linkin Park - Numb </p>
 
 
     </section>
