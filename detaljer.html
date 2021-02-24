@@ -32,7 +32,7 @@
         }
 
         .row {
-            margin-top: 2.3vw;
+            margin-top: 2.5vw;
         }
 
         body {
@@ -60,6 +60,7 @@
             font-style: italic;
             font-weight: 400;
             color: whitesmoke;
+            margin-top: 1vw;
         }
 
         h2 {
@@ -67,6 +68,7 @@
             font-style: normal;
             font-weight: 600;
             color: #00C2BC;
+            margin-top: 1vw;
         }
 
         h3 {
@@ -74,6 +76,7 @@
             font-style: normal;
             font-weight: 200;
             color: whitesmoke;
+            margin-top: 1vw;
         }
 
         p,
@@ -82,6 +85,7 @@
             font-style: normal;
             font-weight: 100;
             color: whitesmoke;
+            margin-top: 2vw;
         }
 
         * {
@@ -380,7 +384,7 @@
             document.querySelector(".album").textContent = `Album: ${json.Album}`;
             document.querySelector(".date").textContent = `Date of release: ${json.Formateretdato}`;
             document.querySelector(".genre").textContent = `Genre: ${json.Genre}`;
-            document.querySelector(".beskrivelse").textContent = `Beskrivelse: ${json.Beskrivelse}`;
+            document.querySelector(".beskrivelse").textContent = `Description: ${json.Beskrivelse}`;
             document.querySelector("button").addEventListener("click", tilbage);
 
         }
