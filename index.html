@@ -38,6 +38,7 @@
             height: auto;
         }
 
+        /*Styling til nav*/
         body {
             overflow-x: hidden;
         }
@@ -60,6 +61,7 @@
             padding: 10px;
         }
 
+        /*Burger menu*/
         .burger {
             height: 31px;
         }
@@ -73,6 +75,7 @@
             border-radius: 50px;
         }
 
+        /*Logo*/
         .logo img {
             width: 50%;
         }
@@ -104,6 +107,7 @@
             transform: translateY(4px);
         }
 
+        /*Styling til links i nav*/
         .nav-links {
             position: absolute;
             height: 90vh;
@@ -144,6 +148,7 @@
 
         }
 
+        /*Burger menu animation*/
         .toggle .line1 {
             transform: rotate(-45deg) translate(-6px, 6px);
         }
@@ -156,6 +161,7 @@
             transform: rotate(+45deg) translate(-6px, -6px);
         }
 
+        /*Grid til footer*/
         .footer_wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -165,6 +171,7 @@
             min-height: 10vh;
         }
 
+        /*Placer footer img*/
         .footer_img {
             text-align: center;
             place-self: center center;
@@ -177,7 +184,7 @@
 
         }
 
-
+        /*placer footer rights*/
         .footer_rights {
             color: white;
             text-align: center;
@@ -370,10 +377,13 @@
         }
 
         @media only screen and (min-width:1000px) {
+
+            /*Fjerner burger menu*/
             .burger {
                 display: none;
             }
 
+            /*Styling til nav*/
             .nav-links {
                 display: flex;
                 flex-direction: row;
@@ -462,7 +472,6 @@
 
 
         }
-
     </style>
 </head>
 
@@ -470,10 +479,11 @@
 <body>
     <header>
         <nav>
+            <!--Logo-->
             <a href="index.html" class="logo">
                 <img src="logo/soundbump-logo-04.png">
             </a>
-
+            <!--Burgermenu-->
             <div class="burger">
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -481,7 +491,7 @@
 
             </div>
 
-
+            <!--Navigations links-->
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="om.html">About</a>
@@ -632,6 +642,8 @@
             location.href = `detaljer.html?id=${hvad._id}`
 
         }
+
+        // Animation til burgermenu
         const navSlide = () => {
             const burger = document.querySelector('.burger');
             const nav = document.querySelector('.nav-links');
@@ -645,8 +657,5 @@
         }
 
         navSlide();
-
     </script>
-</body>
-
-</html>
+</body></html>
