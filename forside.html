@@ -10,7 +10,7 @@
 <body>
     <section Class="section_wrapper">
 
-        <a href=index.html><button href="index.html">Let's get started</button></a>
+        <a href=index.html><button href="index.html">Let's get started</button></a> <!-- Knap HTML -->
 
     </section>
 
@@ -23,25 +23,25 @@
     }
 
     html {
-        background: url(billeder/forside.jpg) no-repeat center fixed;
+        background: url(billeder/forside.jpg) no-repeat center fixed; /*Billede til forsiden*/
         background-size: cover;
     }
 
-    .section_wrapper {
+    .section_wrapper { /* Grid laves til knappen*/
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         height: 100vh;
     }
 
-    a {
+    a { /* Grid justeres til knappen */
         grid-column: 2/3;
         grid-row: 3/3;
         place-self: center center;
 
     }
 
-    button {
+    button { /*Knap styling*/
         padding: 15px 25px;
         font-size: 2vw;
         text-align: center;
@@ -60,19 +60,19 @@
         max-height: 10vh;
     }
 
-    button:hover {
+    button:hover { /* Knap hover effekt */
         background-color: black;
         color: white;
     }
 
-    button:active {
+    button:active { /* Knap når den aktiveres */
         background-color: ;
         box-shadow: 0 5px #00C2BC;
         transform: translateY(4px);
     }
 
 
-    @media (max-width: 750px) {
+    @media (max-width: 750px) { /* Media query, brug af et andet billede i mindre enheder */
         html {
             background: url(billeder/forside2.jpg) no-repeat center fixed;
             background-size: cover;
